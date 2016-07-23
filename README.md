@@ -69,7 +69,7 @@ It is  possible to launch the application from any other application that asks f
 
 ## External code and References 
 
-This app would'nt have been possible if not for the following great resources:
+This project wouldn't have been possible without the following great resources:
 
 * [Google Mobile Vision Text API](https://developers.google.com/vision/text-overview)
 * [Android-er / GridView code sample](http://android-er.blogspot.com.br/2012/07/gridview-loading-photos-from-sd-card.html)
@@ -77,7 +77,7 @@ This app would'nt have been possible if not for the following great resources:
 * [Adrian Rosebrock from pyimagesearch.com for the excellent tutorial on how to handle the images](http://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/)
 * [Gabriele Mariotti / On how to implement sections in the RecyclerView](https://gist.github.com/gabrielemariotti/e81e126227f8a4bb339c)
 
-and also:
-* A lot of cups of coffee and [stackoverflow.com](http://stackoverflow.com/)
+and not to forget:
+* A lot of coffee and the ever dependable [stackoverflow.com](http://stackoverflow.com/)
 
 <hr>
