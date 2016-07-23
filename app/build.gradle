@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'DocScanKey'
+            keyPassword 'capstoneproject'
+            storeFile file('../keystore/keystore.jks')
+            storePassword 'capstoneproject'
+        }
+    }
+    compileSdkVersion 23
+
+    buildToolsVersion '23.0.2'
+    defaultConfig {
+        applicationId "com.myapps.documentscanner"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.google.zxing:core:3.0.1'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.afollestad:drag-select-recyclerview:0.3.6'
+    compile 'com.github.nostra13:Android-Universal-Image-Loader:v1.9.5'
+    compile 'com.github.fafaldo:fab-toolbar:1.2.0'
+    compile 'com.google.android.gms:play-services-analytics:9.2.1'
+    compile 'com.google.android.gms:play-services-vision:9.2.1'
+    compile 'com.google.android.gms:play-services-appindexing:9.2.1'
+    compile project(':openCVLibrary310')
+}
+
+apply plugin: 'com.google.gms.google-services'

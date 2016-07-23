@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/tag_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/standard_tags"
+            android:id="@+id/textView"
+            android:layout_gravity="start" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textView"
+            android:paddingTop="@dimen/margin12"
+            android:id="@+id/linearLayout">
+
+            <ImageView
+                android:layout_width="@dimen/drawable_width"
+                android:layout_height="@dimen/drawable_width"
+                android:layout_margin="@dimen/gap"
+                android:id="@+id/buttonRocket"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_tag_rocket" />
+
+            <ImageView
+                android:layout_width="@dimen/drawable_width"
+                android:layout_height="@dimen/drawable_width"
+                android:layout_margin="@dimen/gap"
+                android:id="@+id/buttonGift"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_tag_gift"/>
+
+            <ImageView
+                android:layout_width="@dimen/drawable_width"
+                android:layout_height="@dimen/drawable_width"
+                android:layout_margin="@dimen/gap"
+                android:id="@+id/buttonTv"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_tag_tv" />
+
+            <ImageView
+                android:layout_width="@dimen/drawable_width"
+                android:layout_height="@dimen/drawable_width"
+                android:layout_margin="@dimen/gap"
+                android:id="@+id/buttonBell"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_tag_bell"/>
+
+            <ImageView
+                android:layout_width="@dimen/drawable_width"
+                android:layout_height="@dimen/drawable_width"
+                android:layout_margin="@dimen/gap"
+                android:id="@+id/buttonGame"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_tag_game"/>
+
+            <ImageView
+                android:layout_width="@dimen/drawable_width"
+                android:layout_height="@dimen/drawable_width"
+                android:layout_margin="@dimen/gap"
+                android:id="@+id/buttonStar"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_tag_star"/>
+
+            <ImageView
+                android:layout_width="@dimen/drawable_width"
+                android:layout_height="@dimen/drawable_width"
+                android:layout_margin="@dimen/gap"
+                android:id="@+id/buttonMagnet"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_tag_magnet"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            android:id="@+id/tag_done"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_below="@+id/linearLayout" />
+
+    </RelativeLayout>
+
+</FrameLayout>

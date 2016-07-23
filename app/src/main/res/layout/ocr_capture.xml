@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zerodp"
+        android:layout_weight="70"
+        android:keepScreenOn="true">
+
+        <com.myapps.documentscanner.uicamera.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.myapps.documentscanner.uicamera.GraphicOverlay
+                android:id="@+id/graphicOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.myapps.documentscanner.uicamera.CameraSourcePreview>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zerodp"
+        android:layout_weight="30"
+        android:weightSum="100"
+        android:orientation="vertical">
+
+        <EditText
+            android:hint="@string/tap_detected_text_on_the_screen_to_capture"
+            android:id="@+id/ocr_text"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zerodp"
+            android:layout_gravity="bottom"
+            android:layout_weight="70"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zerodp"
+            android:orientation="horizontal"
+            android:layout_weight="30"
+            android:layout_marginBottom="@dimen/gap"
+            android:layout_marginLeft="@dimen/sq_layout_padding"
+            android:layout_marginRight="@dimen/sq_layout_padding"
+            android:background="@color/white"
+            android:weightSum="100">
+
+            <Button
+                android:id="@+id/save_text"
+                android:layout_width="@dimen/zerodp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="65"
+                android:textColor="@color/white"
+                android:elevation="@dimen/gap"
+                android:shadowColor="@color/shadow"
+                android:translationZ="@dimen/gap"
+                android:text="@string/save_text"
+                android:layout_marginLeft="@dimen/gap"
+                android:layout_marginRight="@dimen/gap"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="@dimen/zerodp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="35"
+                android:textColor="@color/white"
+                android:elevation="@dimen/gap"
+                android:shadowColor="@color/shadow"
+                android:translationZ="@dimen/gap"
+                android:text="@string/clear"
+                android:layout_marginLeft="@dimen/gap"
+                android:layout_marginRight="@dimen/gap"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

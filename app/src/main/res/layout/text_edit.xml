@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gap"
+        android:padding="@dimen/gap">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="@dimen/gap"
+            android:text="@string/textfilename"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/text_edit_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/enter_filename"
+            android:imeOptions="actionNext"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/text_edit_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/gap"
+            android:gravity="top"
+            android:hint="@string/enter_text"
+            android:imeOptions="actionNext"
+            android:padding="@dimen/gap"></EditText>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gap"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/text_edit_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="@dimen/zerodp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/gap"
+            android:layout_marginRight="@dimen/gap"
+            android:layout_weight="65"
+            android:elevation="@dimen/gap"
+            android:shadowColor="@color/shadow"
+            android:text="@string/save_text"
+            android:textColor="@color/white"
+            android:translationZ="@dimen/gap" />
+
+        <Button
+            android:id="@+id/mclear"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="@dimen/zerodp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/gap"
+            android:layout_marginRight="@dimen/gap"
+            android:layout_weight="35"
+            android:elevation="@dimen/gap"
+            android:shadowColor="@color/shadow"
+            android:text="@string/clear"
+            android:textColor="@color/white"
+            android:translationZ="@dimen/gap" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

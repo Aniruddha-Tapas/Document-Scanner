@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/widget_margin"
+    android:background="@color/widget_background">
+
+    <Button
+        android:id="@+id/wb1home"
+        android:text="@string/scan"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin10"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:elevation="@dimen/gap"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textSize="@dimen/widget_text_size"
+        android:typeface="monospace" />
+
+    <Button
+        android:text="@string/ocr"
+        android:id="@+id/wb2ocr"
+        android:layout_gravity="center_vertical"
+        android:layout_width="@dimen/widget_ocr_button"
+        android:layout_height="@dimen/widget_ocr_button"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:background="@drawable/ic_camera_blue"
+        android:gravity="center"
+        android:enabled="true"
+        android:textStyle="bold"
+        android:elevation="@dimen/gap" />
+
+    <Button
+        android:id="@+id/wb3gallery"
+        android:text="@string/docs"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/margin10"
+        android:drawableRight="@drawable/ic_gallery"
+        android:gravity="center"
+        android:enabled="true"
+        android:elevation="@dimen/gap"
+        android:textSize="@dimen/widget_text_size"
+        android:typeface="monospace" />
+
+</LinearLayout>

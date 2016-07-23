@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="manage_text">
+        <item>Edit</item>
+        <item>Share</item>
+        <item>Delete</item>
+    </string-array>
+
+</resources> 

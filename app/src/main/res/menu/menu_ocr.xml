@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OcrCaptureActivity">
+
+    <item
+        android:id="@+id/saved_texts"
+        android:icon="@drawable/view_headline"
+        android:orderInCategory="1"
+        android:title="@string/saved_texts_list"
+        app:showAsAction="always" />
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/tblocks"
+            android:icon="@drawable/message"
+            android:orderInCategory="1"
+            android:title="@string/detect_text_blocks"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/tlines"
+            android:icon="@drawable/message_text"
+            android:orderInCategory="1"
+            android:title="@string/detect_text_lines"
+            android:checked="true"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/twords"
+            android:icon="@drawable/message_processing"
+            android:orderInCategory="1"
+            android:title="@string/detect_text_words"
+            app:showAsAction="never" />
+
+    </group>
+
+</menu>

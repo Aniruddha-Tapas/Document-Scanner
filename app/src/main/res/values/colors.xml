@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="colorPrimaryLight">#64B5F6</color>
+    <color name="colorSecondary">#FF82B1EE</color>
+    <color name="colorSecondaryDark">#FF82B1FF</color>
+
+    <color name="shadow">#E0E0E0</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="doc_scan_background">#FF000000</color>
+    <color name="widget_background">#55000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="toolbarcolor">#A02962EE</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+</resources>

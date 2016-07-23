@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="fab-toolbar-1.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.fafaldo/fab-toolbar/1.2.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.fafaldo/fab-toolbar/1.2.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.fafaldo/fab-toolbar/1.2.0/d83c4ff7df8a89aa6bc8d1d13f77f4b04bba26b0/fab-toolbar-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

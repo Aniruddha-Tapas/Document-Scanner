@@ -1,0 +1,342 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/doc_scan_background"
+    tools:context=".DocumentScannerActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="vertical">
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center_vertical">
+
+        <ImageView
+            android:id="@+id/scannedAnimation"
+            android:layout_width="@dimen/zeropx"
+            android:layout_height="@dimen/zeropx"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/zeropx"
+            android:layout_marginLeft="@dimen/zeropx"
+            android:background="@color/transparent"
+            android:visibility="invisible" />
+
+        <com.myapps.documentscanner.views.HUDCanvasView
+            android:id="@+id/hud"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:paddingBottom="@dimen/zerodp"
+            android:paddingLeft="@dimen/zerodp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/galleryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/thirtydp"
+            android:layout_marginTop="@dimen/eightydp"
+            android:alpha="0.8"
+            android:backgroundTint="@color/toolbarcolor"
+            android:src="@drawable/ic_menu_gallery"
+            android:tint="@color/white"
+            app:borderWidth="@dimen/zerodp"
+            app:elevation="@dimen/zerosp"
+            app:fabSize="mini" />
+
+
+        <ImageView
+            android:id="@+id/nw_angle"
+            android:layout_width="@dimen/angleside"
+            android:layout_height="@dimen/angleside"
+            android:rotation="270"
+            android:src="@drawable/angle" />
+
+        <ImageView
+            android:id="@+id/se_angle"
+            android:layout_width="@dimen/angleside"
+            android:layout_height="@dimen/angleside"
+            android:rotation="90"
+            android:src="@drawable/angle" />
+
+        <ImageView
+            android:id="@+id/sw_angle"
+            android:layout_width="@dimen/angleside"
+            android:layout_height="@dimen/angleside"
+            android:rotation="180"
+            android:src="@drawable/angle" />
+
+        <ImageView
+            android:id="@+id/ne_angle"
+            android:layout_width="@dimen/angleside"
+            android:layout_height="@dimen/angleside"
+            android:src="@drawable/angle" />
+
+
+        <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+            android:id="@+id/fabtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:containerId="@+id/fabtoolbar_container"
+            app:fabId="@+id/fabtoolbar_fab"
+            app:fabToolbarId="@+id/fabtoolbar_toolbar"
+            app:fadeInFraction="0.2"
+            app:hideDuration="200"
+            app:horizontalMargin="@dimen/thirtydp"
+            app:showDuration="600"
+            app:verticalMargin="@dimen/thirtydp">
+
+            <RelativeLayout
+                android:id="@id/fabtoolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seventydp"
+                android:layout_alignParentTop="true">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@id/fabtoolbar_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:alpha="0.8"
+                    android:backgroundTint="@color/toolbarcolor"
+                    android:rotation="90"
+                    android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+                    android:tint="@color/white"
+                    app:borderWidth="@dimen/zerodp"
+                    app:elevation="@dimen/zerosp"
+                    app:fabSize="mini" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/fabtoolbar_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seventydp"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/autoModeButton"
+                    android:layout_width="@dimen/zerodp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_find_in_page"
+                    android:tint="@color/toolbarcolor" />
+
+                <ImageView
+                    android:id="@+id/filterModeButton"
+                    android:layout_width="@dimen/zerodp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_photo_filter_white_24dp"
+                    android:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/flashModeButton"
+                    android:layout_width="@dimen/zerodp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_flash_on_24dp"
+                    android:tint="@color/toolbarcolor" />
+
+                <ImageView
+                    android:id="@+id/colorModeButton"
+                    android:layout_width="@dimen/zerodp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_palette"
+                    android:tint="@color/toolbarcolor" />
+
+                <ImageView
+                    android:id="@+id/settingsButton"
+                    android:layout_width="@dimen/zerodp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings"
+                    android:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/hideToolbarButton"
+                    android:layout_width="@dimen/zerodp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/abc_ic_clear_mtrl_alpha"
+                    android:tint="@color/white" />
+
+            </LinearLayout>
+
+        </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wait_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/layout_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:text="@string/click_ocr_to_detect_text"
+            android:textColor="@color/colorSecondary" />
+
+        <Button
+            android:id="@+id/ocr_click"
+            android:layout_width="@dimen/ocr_button_size"
+            android:layout_height="@dimen/ocr_button_size"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/thirtydp"
+            android:background="@drawable/ic_camera_blue"
+            android:elevation="@dimen/gap"
+            android:shadowColor="@color/shadow"
+            android:translationZ="@dimen/gap"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/ocr"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/saved_ocr_texts"
+        android:layout_width="@dimen/sq_button_size"
+        android:layout_height="@dimen/sq_button_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/thirtydp"
+        android:layout_marginTop="@dimen/eightydp"
+        android:alpha="0.8"
+        android:elevation="@dimen/gap"
+        android:shadowColor="@color/shadow"
+        android:translationZ="@dimen/gap"
+        android:background="@drawable/savedocrtexts" />
+
+    
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/margin10"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="@dimen/zerodp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="right|center_vertical"
+            android:text="@string/bscan"
+            android:paddingRight="@dimen/gap"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorSecondaryDark"
+            android:typeface="monospace"/>
+
+        <Button
+            android:id="@+id/scanDocButton"
+            android:layout_width="@dimen/seventydp"
+            android:layout_height="@dimen/seventydp"
+            android:background="@drawable/capture"
+            android:elevation="@dimen/gap"
+            android:shadowColor="@color/shadow"
+            android:translationZ="@dimen/gap"
+            android:enabled="true"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="@dimen/zerodp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="left|center_vertical"
+            android:text="@string/bdoc"
+            android:paddingLeft="@dimen/gap"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorSecondaryDark"
+            android:typeface="monospace" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

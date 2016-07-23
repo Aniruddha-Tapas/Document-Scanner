@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Android-Universal-Image-Loader-v1.9.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nostra13/Android-Universal-Image-Loader/v1.9.5/81ff3766b621c7073b34ed0601867bd035d50b4f/Android-Universal-Image-Loader-v1.9.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nostra13/Android-Universal-Image-Loader/v1.9.5/30971713274c11cf95306223a3280c1bb83653de/Android-Universal-Image-Loader-v1.9.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
