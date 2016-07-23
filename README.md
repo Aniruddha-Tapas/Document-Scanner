@@ -1,6 +1,7 @@
+<hr>
+
 # Document Scanner
 
-===============
 
 This Document Scanner application turns your mobile into a portable scanner, which can be used for scanning handwritten notes and printed documents.
 
@@ -23,6 +24,7 @@ It is  possible to launch the application from any other application that asks f
 * Easily share scanned docs with others via social media, email attachment or sending the doc link.
 
 
+
 ## Screenshots
 
 
@@ -32,6 +34,7 @@ It is  possible to launch the application from any other application that asks f
   <img src="https://raw.githubusercontent.com/Aniruddha-Tapas/Capstone-Project/master/Screenshots/Screenshot3.png" height="340" width="190"/>
   <img src="https://raw.githubusercontent.com/Aniruddha-Tapas/Capstone-Project/master/Screenshots/Screenshot4.png" height="340" width="190"/>
 </p>
+
 
 ## Libraries
 1. [OpenCV Android v3.1.0](http://opencv.org/platforms/android.html) for capturing and manipulation of images.
