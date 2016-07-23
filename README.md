@@ -77,7 +77,7 @@ This project wouldn't have been possible without the following great resources:
 * [Adrian Rosebrock from pyimagesearch.com for the excellent tutorial on how to handle the images](http://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/)
 * [Gabriele Mariotti / On how to implement sections in the RecyclerView](https://gist.github.com/gabrielemariotti/e81e126227f8a4bb339c)
 
-and not to forget:
+not to forget:
 * A lot of coffee and the ever dependable [stackoverflow.com](http://stackoverflow.com/)
 
 <hr>
