@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="FABToolbarLayout"><attr format="integer" name="showDuration"/><attr format="integer" name="hideDuration"/><attr format="dimension" name="verticalMargin"/><attr format="dimension" name="horizontalMargin"/><attr format="dimension" name="fadeInPivotX"/><attr format="dimension" name="fadeInPivotY"/><attr format="float" name="fadeInFraction"/><attr format="reference" name="fabId"/><attr format="reference" name="containerId"/><attr format="reference" name="fabToolbarId"/><attr format="boolean" name="fabDrawableAnimationEnabled"/></declare-styleable>
-    <!-- From: file:/D:/repos/github/FABToolbar/FABToolbar/library/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="app_name">fab-toolbar</string>
-</resources>
