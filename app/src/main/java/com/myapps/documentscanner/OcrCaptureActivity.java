@@ -175,13 +175,13 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                                     //Write to external storage
                                     try {
                                         File ocrfolder = new File(Environment.getExternalStorageDirectory().toString()
-                                                + "/DocumentScanner/OCR-Texts");
+                                                + "/ConTextScanner/OCR-Texts");
                                         if (!ocrfolder.exists()) {
                                             ocrfolder.mkdir();
                                             Log.d(TAG, "wrote: created folder " + ocrfolder.getPath());
                                         }
                                         ocrtextfile = Environment.getExternalStorageDirectory().toString()
-                                                + "/DocumentScanner/OCR-Texts/"
+                                                + "/ConTextScanner/OCR-Texts/"
                                                 + savedfilename
                                                 + ".txt";
 
@@ -198,11 +198,11 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                                         Toast.makeText(getBaseContext(), "Done writing to " + ocrtextfile, Toast.LENGTH_LONG).show();
 
                                         ExifInterface exif = new ExifInterface(ocrtextfile);
-                                        exif.setAttribute("UserComment", "Generated using DocumentScanner");
+                                        exif.setAttribute("UserComment", "Generated using ConTextScanner");
                                         String nowFormatted = mDateFormat.format(new Date().getTime());
                                         exif.setAttribute(ExifInterface.TAG_DATETIME, nowFormatted);
                                         exif.setAttribute(ExifInterface.TAG_DATETIME_DIGITIZED, nowFormatted);
-                                        exif.setAttribute("Software", "DocumentScanner " + BuildConfig.VERSION_NAME);
+                                        exif.setAttribute("Software", "ConTextScanner " + BuildConfig.VERSION_NAME);
                                         exif.saveAttributes();
 
                                         data = new Intent(v.getContext(), DocumentScannerActivity.class);

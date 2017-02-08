@@ -1021,13 +1021,13 @@ public class DocumentScannerActivity extends AppCompatActivity
                 isIntent = true;
             } else {
                 File folder = new File(Environment.getExternalStorageDirectory().toString()
-                        + "/DocumentScanner");
+                        + "/ConTextScanner");
                 if (!folder.exists()) {
                     folder.mkdir();
                     Log.d(TAG, "wrote: created folder " + folder.getPath());
                 }
                 fileName = Environment.getExternalStorageDirectory().toString()
-                        + "/DocumentScanner/DOC-"
+                        + "/ConTextScanner/DOC-"
                         + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date())
                         + ".jpg";
             }
@@ -1042,11 +1042,11 @@ public class DocumentScannerActivity extends AppCompatActivity
 
             try {
                 ExifInterface exif = new ExifInterface(fileName);
-                exif.setAttribute("UserComment", "Generated using DocumentScanner");
+                exif.setAttribute("UserComment", "Generated using ConTextScanner");
                 String nowFormatted = mDateFormat.format(new Date().getTime());
                 exif.setAttribute(ExifInterface.TAG_DATETIME, nowFormatted);
                 exif.setAttribute(ExifInterface.TAG_DATETIME_DIGITIZED, nowFormatted);
-                exif.setAttribute("Software", "DocumentScanner " + BuildConfig.VERSION_NAME);
+                exif.setAttribute("Software", "ConTextScanner " + BuildConfig.VERSION_NAME);
                 exif.saveAttributes();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -1130,6 +1130,7 @@ public class DocumentScannerActivity extends AppCompatActivity
         public void run() {
             final ImageView imageView = (ImageView) findViewById(R.id.scannedAnimation);
 
+
             Display display = getWindowManager().getDefaultDisplay();
             android.graphics.Point size = new android.graphics.Point();
             display.getRealSize(size);
@@ -1153,6 +1154,7 @@ public class DocumentScannerActivity extends AppCompatActivity
                 double documentHeight = Math.max(documentLeftHeight, documentRightHeight);
 
                 Log.d(TAG, "device: " + width + "x" + height + " image: " + imageWidth + "x" + imageHeight + " document: " + documentWidth + "x" + documentHeight);
+
 
 
                 Log.d(TAG, "previewPoints[0] x=" + previewPoints[0].x + " y=" + previewPoints[0].y);

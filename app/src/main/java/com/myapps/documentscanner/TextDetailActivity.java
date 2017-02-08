@@ -178,12 +178,12 @@ public class TextDetailActivity extends AppCompatActivity {
             }
 
             String ocrtextfile = Environment.getExternalStorageDirectory().toString()
-                    + "/DocumentScanner/OCR-Texts/"
+                    + "/ConTextScanner/OCR-Texts/"
                     + title
                     + ".txt";
 
             String oldocrtextfile = Environment.getExternalStorageDirectory().toString()
-                    + "/DocumentScanner/OCR-Texts/"
+                    + "/ConTextScanner/OCR-Texts/"
                     + textTitle
                     + ".txt";
 
@@ -205,12 +205,12 @@ public class TextDetailActivity extends AppCompatActivity {
                 ExifInterface exif = null;
 
                 exif = new ExifInterface(ocrtextfile);
-                exif.setAttribute("UserComment", "Generated using DocumentScanner");
+                exif.setAttribute("UserComment", "Generated using ConTextScanner");
                 SimpleDateFormat mDateFormat = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss");
                 String nowFormatted = mDateFormat.format(new Date().getTime());
                 exif.setAttribute(ExifInterface.TAG_DATETIME, nowFormatted);
                 exif.setAttribute(ExifInterface.TAG_DATETIME_DIGITIZED, nowFormatted);
-                exif.setAttribute("Software", "DocumentScanner " + BuildConfig.VERSION_NAME);
+                exif.setAttribute("Software", "ConTextScanner " + BuildConfig.VERSION_NAME);
                 exif.saveAttributes();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -270,7 +270,7 @@ public class TextDetailActivity extends AppCompatActivity {
                         getContentResolver().delete(textUri, null, null);
 
                         String ocrtextfile = Environment.getExternalStorageDirectory().toString()
-                                + "/DocumentScanner/OCR-Texts/"
+                                + "/ConTextScanner/OCR-Texts/"
                                 + textTitle
                                 + ".txt";
 
@@ -312,7 +312,7 @@ public class TextDetailActivity extends AppCompatActivity {
 
         String title = mTitleText.getText().toString();
         String ocrtextfile = Environment.getExternalStorageDirectory().toString()
-                + "/DocumentScanner/OCR-Texts/"
+                + "/ConTextScanner/OCR-Texts/"
                 + title
                 + ".txt";
 
@@ -320,6 +320,6 @@ public class TextDetailActivity extends AppCompatActivity {
         final File textFile = new File(ocrtextfile);
         shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(textFile));
         Log.d("Text_Share", "uri " + Uri.fromFile(textFile));
-        startActivity(Intent.createChooser(shareIntent, getString(R.string.share_snackbar)));
+        startActivity(Intent.createChooser(shareIntent, "Share text file through:"));
     }
 }

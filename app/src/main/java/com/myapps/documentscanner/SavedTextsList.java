@@ -182,7 +182,7 @@ public class SavedTextsList extends AppCompatActivity implements LoaderManager.L
                     getContentResolver().delete(textUri, null, null);
 
                     String ocrtextfile = Environment.getExternalStorageDirectory().toString()
-                            + "/DocumentScanner/OCR-Texts/"
+                            + "/ConTextScanner/OCR-Texts/"
                             + textTitle
                             + ".txt";
                     final File textFile = new File(ocrtextfile);
@@ -218,14 +218,14 @@ public class SavedTextsList extends AppCompatActivity implements LoaderManager.L
         shareIntent.setType("text/plain");
 
         String ocrtextfile = Environment.getExternalStorageDirectory().toString()
-                + "/DocumentScanner/OCR-Texts/"
+                + "/ConTextScanner/OCR-Texts/"
                 + title
                 + ".txt";
 
         final File textFile = new File(ocrtextfile);
         shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(textFile));
         Log.d("Text_Share","uri "+Uri.fromFile(textFile));
-        startActivity(Intent.createChooser(shareIntent, getString(R.string.share_snackbar)));
+        startActivity(Intent.createChooser(shareIntent, "Share text file through:"));
     }
 
     @Override
