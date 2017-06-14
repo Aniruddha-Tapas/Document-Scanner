@@ -54,7 +54,7 @@ It is  possible to launch the application from any other application that asks f
 
 	If you want to use Google Analytics in your app, you'll require a configuration file.  You must have a Google Analytics account and a registered property to get the configuration file.
 	
-	###[Get A Configuration File](https://developers.google.com/mobile/add?platform=android&cntapi=analytics&cnturl=https:%2F%2Fdevelopers.google.com%2Fanalytics%2Fdevguides%2Fcollection%2Fandroid%2Fv4%2Fapp%3Fconfigured%3Dtrue&cntlbl=Continue%20Adding%20Analytics)
+	### [Get A Configuration File](https://developers.google.com/mobile/add?platform=android&cntapi=analytics&cnturl=https:%2F%2Fdevelopers.google.com%2Fanalytics%2Fdevguides%2Fcollection%2Fandroid%2Fv4%2Fapp%3Fconfigured%3Dtrue&cntlbl=Continue%20Adding%20Analytics)
 	
 	Then copy the google-services.json file you just downloaded into the app/ or mobile/ directory of your Android Studio project. Open the Android Studio Terminal pane:
 	For Windows : $ move path-to-download/google-services.json app/
