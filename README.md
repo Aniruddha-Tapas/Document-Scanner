@@ -38,7 +38,7 @@ It is  possible to launch the application from any other application that asks f
 
 ## Libraries
 1. [OpenCV Android v3.1.0](http://opencv.org/platforms/android.html) for capturing and manipulation of images.
-	Due to this version of OpenCV integerated in the app, it needs to run on Android 5.0 (lollipop) or newer. 
+	Due to this version of OpenCV integerated in the app, it needs to run on Android 5.0 (lollipop) or newer. You can integrate a lower version of OpenCV like v2.4.3 if you want to run the app on devices below Android 5.0.
 	
 	### [How to integrate OpenCV into Android Studio](http://stackoverflow.com/questions/27406303/opencv-in-android-studio) 
 	
