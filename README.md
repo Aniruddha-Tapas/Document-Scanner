@@ -71,6 +71,7 @@ It is  possible to launch the application from any other application that asks f
 
 This project wouldn't have been possible without the following great resources:
 
+* Inspiration from [OpenNoteScanner](https://github.com/ctodobom/OpenNoteScanner) by [Claudemir Todo Bom](https://github.com/ctodobom)
 * [Google Mobile Vision Text API](https://developers.google.com/vision/text-overview)
 * [Android-er / GridView code sample](http://android-er.blogspot.com.br/2012/07/gridview-loading-photos-from-sd-card.html)
 * [Android Hive / Full Screen Image pager](http://www.androidhive.info/2013/09/android-fullscreen-image-slider-with-swipe-and-pinch-zoom-gestures/)
