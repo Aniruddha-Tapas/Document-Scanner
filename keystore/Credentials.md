@@ -1,4 +1,4 @@
-#Credentials for using the same keystore to generate signed APK
+# Credentials for using the same keystore to generate signed APK
 
 ```
 keyAlias 'DocScanKey'
