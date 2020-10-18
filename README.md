@@ -3,14 +3,14 @@
 # Document Scanner
 
 
-This app turns your mobile into a portable scanner, which can be used for scanning handwritten notes and printed documents.
+This app turns your mobile into a portable scanner, which can be used for scanning handwritten notes and printed documents. 
+Anyone can easily use this code in their app to add this feature in it.
 
-It automatically detect the edge of the paper over a contrasting surface. When using the printed special page template it automatically detects the QR Code printed on the bottom right corner and scans the page immediately. After the page is detected, it compensates any perspective from the image adjusting it to a 90 degree top view and saves it on a folder on the device.
+It automatically detects the edge of the paper over a contrasting surface. When using the printed special page template it automatically detects the QR Code printed on the bottom right corner and scans the page immediately. After the page is detected, it compensates any perspective from the image adjusting it to a 90 degree top view and saves it on a folder on the device.
 
 It also incorporates OCR functionality which the user can use to detect text from documents and save them as editable text files in the external storage of the device.
 
 It is  possible to launch the application from any other application that asks for a picture.
-
 <hr>
 
 ## Features
